@@ -8,6 +8,7 @@ It can also run standalone
 standalone
 ```
 cargo build
+cargo run
 ```
 
 For web deployment
@@ -18,4 +19,9 @@ cargo build --target=wasm32-unknown-emscripten
 To try web locally
 ```
 ./run_wasm.sh
+```
+
+to run the release you'll need to deploy in a webserver, e.g.
+```
+python3 -m http.server 8000
 ```

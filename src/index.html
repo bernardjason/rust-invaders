@@ -39,6 +39,7 @@
                 canvas.setAttribute("id", "canvas");
                 canvas.setAttribute("width", "1024");
                 canvas.setAttribute("height", "600");
+                canvas.setAttribute("tabindex", "1");
                 canvas.setAttribute("style", "border:8px solid blue");
                 // var body = document.querySelector('body')
 		        var body = document.getElementById("game_window");
@@ -67,6 +68,7 @@
         javascript_read_stats  = Module.cwrap('javascript_read_stats', 'string', []);
     }
     function end_game() {
+        document.getElementById("score").style.display ="none";
         document.getElementById("canvas").style.display = "none";
         document.getElementById("end").style.display = "block";
         document.getElementById("finalscore").innerHTML =stats;
